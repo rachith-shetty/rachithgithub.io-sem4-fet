@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rachith H R - Bio</title>
+    <title>Rachith H R - Bio Data</title>
 
     <style>
         body {
-            background-color: #1e90ff; /* blue background */
-            font-family: Arial;
-            color: black; /* black text */
             margin: 0;
+            font-family: Arial;
+            background-color: #add8e6; /* light blue */
+            color: black;
             text-align: center;
         }
 
-        .container {
-            padding: 40px;
+        .hero {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 40px;
         }
 
         button {
-            padding: 12px 20px;
+            padding: 12px 25px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 20px;
         }
 
-        #about {
-            margin-top: 20px;
-            display: none; /* hidden initially */
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
+        #bio {
+            display: none;
+            width: 70%;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.8);
+            padding: 25px;
             border-radius: 10px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #000;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Rachith H R</h1>
-    <p>CSE Student | CSE3 | MITE</p>
+<!-- FIRST SCREEN -->
+<div class="hero">
+    <h1>Hi, I'm Rachith H R</h1>
+    <p>Welcome to my personal bio page</p>
 
-    <button onclick="showAbout()">About Me</button>
-
-    <div id="about">
-        <h2>About Me</h2>
-        <p>
-            I am Rachith H R, a Computer Science Engineering student at MITE.
-            I am interested in web development, programming, and learning new technologies.
-            My goal is to become a skilled software engineer and build useful applications.
-        </p>
-    </div>
+    <button onclick="showBio()">View My Bio</button>
 </div>
 
+<!-- FULL BIO (hidden initially) -->
+<div id="bio">
+
+    <h2>About Me</h2>
+    <p>
+        I am Rachith H R, a Computer Science Engineering student from CSE3 at MITE.
+        I have a strong interest in technology and enjoy learning how websites, applications,
+        and software systems work.
+    </p>
+
+    <p>
+        I am currently building my skills in programming, web development, and problem solving.
+        I enjoy creating simple projects using HTML, CSS, and JavaScript to understand real-world development.
+    </p>
+
+    <h2>Education</h2>
+    <p>
+        I am pursuing Computer Science Engineering at Mangalore Institute of Technology and Engineering (MITE).
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML - Web Structure</li>
+        <li>CSS - Styling Web Pages</li>
+        <li>JavaScript - Basic Interactivity</li>
+        <li>Problem Solving</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <p>
+        I am interested in web development, software development, and learning new technologies.
+        I also enjoy building small projects that help me understand coding better.
+    </p>
+
+    <h2>Mission Statement</h2>
+    <p>
+        My mission is to become a skilled software engineer and build useful applications
+        that solve real-world problems while continuously improving my technical knowledge.
+    </p>
+
+</div>
+
+<!-- JAVASCRIPT -->
 <script>
-function showAbout() {
-    document.getElementById("about").style.display = "block";
+function showBio() {
+    document.getElementById("bio").style.display = "block";
 }
 </script>
 
