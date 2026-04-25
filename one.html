@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Rachith H R - Bio</title>
+
     <style>
         body {
             font-family: Arial;
@@ -30,18 +31,24 @@
         ul {
             list-style-type: square;
         }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- Hero Section -->
+<!-- HERO SECTION -->
 <div class="hero">
     <h1>Rachith H R</h1>
     <p>Computer Science Engineering Student | CSE3 | MITE</p>
 </div>
 
-<!-- Main Content -->
+<!-- MAIN CONTENT -->
 <div class="container">
 
     <h2>About Me</h2>
@@ -53,7 +60,7 @@
 
     <p>
         My goal is to continuously improve my technical knowledge and gain practical experience 
-        by working on projects. I am particularly interested in web development, where I can create 
+        by working on projects. I am particularly interested in web development where I can create 
         interactive and user-friendly websites using HTML, CSS, and JavaScript.
     </p>
 
@@ -72,7 +79,27 @@
         continuously grow in the field of computer science.
     </p>
 
+    <!-- JAVASCRIPT PART -->
+    <h2>Interactive Section</h2>
+
+    <button onclick="showMessage()">Click to see my goal</button>
+    <p id="output"></p>
+
+    <button onclick="changeColor()">Change Background Color</button>
+
 </div>
+
+<!-- JAVASCRIPT -->
+<script>
+function showMessage() {
+    document.getElementById("output").innerHTML =
+    "My goal is to become a skilled software engineer and build real-world applications.";
+}
+
+function changeColor() {
+    document.body.style.backgroundColor = "#d6f5ff";
+}
+</script>
 
 </body>
 </html>
