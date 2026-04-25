@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rachith H R - Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #add8e6;
+            color: #000;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Button */
+        button {
+            padding: 12px 22px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            border: none;
+            background: #000;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        /* Bio Card */
+        #bio {
+            width: 70%;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.9);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+
+            /* smooth animation */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease;
+        }
+
+        /* Active state */
+        #bio.show {
+            max-height: 1000px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        /* Profile circle (optional) */
+        .profile {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            margin: auto;
+            line-height: 100px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hero">
+
+    <div class="profile">RH</div>
+
+    <h1>Hi, I'm Rachith H R</h1>
+    <p>CSE Student | CSE3 | MITE</p>
+
+    <button onclick="toggleBio()" id="btn">View My Bio</button>
+</div>
+
+<!-- BIO SECTION -->
+<div id="bio">
+
+    <h2>About Me</h2>
+    <p>
+        I am Rachith H R, a Computer Science Engineering student at MITE.
+        I am passionate about technology, web development, and learning new skills.
+    </p>
+
+    <p>
+        I enjoy building small projects using HTML, CSS, and JavaScript
+        and improving my problem-solving ability.
+    </p>
+
+    <h2>Education</h2>
+    <p>MITE - Computer Science Engineering (CSE3)</p>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML - Structure of Web Pages</li>
+        <li>CSS - Styling and Layout</li>
+        <li>JavaScript - Interactivity</li>
+        <li>Problem Solving</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <p>
+        Web Development, Software Development, Learning New Technologies
+    </p>
+
+    <h2>Mission</h2>
+    <p>
+        To become a skilled software engineer and build real-world applications
+        that solve problems and improve user experience.
+    </p>
+
+</div>
+
+<script>
+function toggleBio() {
+    let bio = document.getElementById("bio");
+    let btn = document.getElementById("btn");
+
+    bio.classList.toggle("show");
+
+    if (bio.classList.contains("show")) {
+        btn.innerHTML = "Hide My Bio";
+    } else {
+        btn.innerHTML = "View My Bio";
+    }
+}
+</script>
+
+</body>
+</html>
